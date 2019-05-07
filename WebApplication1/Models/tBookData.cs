@@ -12,6 +12,7 @@ namespace WebApplication1.Models
     using System;
     using System.Collections.Generic;
     using System.ComponentModel;
+    using System.ComponentModel.DataAnnotations;
 
     public partial class tBookData
     {
@@ -23,6 +24,7 @@ namespace WebApplication1.Models
         [DisplayName("書籍作者")]
         public string BOOK_AUTHOR { get; set; }
         [DisplayName("書籍購書日期")]
+        [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:yyyy/MM/dd}")]
         public Nullable<System.DateTime> BOOK_BOUGHT_DATE { get; set; }
         [DisplayName("出版商")]
         public string BOOK_PUBLISHER { get; set; }
@@ -33,10 +35,12 @@ namespace WebApplication1.Models
         [DisplayName("書籍保管人")]
         public string BOOK_KEEPER { get; set; }
         [DisplayName("建立時間")]
+        [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:yyyy/MM/dd}")]
         public Nullable<System.DateTime> CREATE_DATE { get; set; }
         [DisplayName("建立使用者")]
         public string CREATE_USER { get; set; }
         [DisplayName("修改時間")]
+        [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:yyyy/MM/dd}")]
         public Nullable<System.DateTime> MODIFY_DATE { get; set; }
         [DisplayName("修改使用者")]
         public string MODIFY_USER { get; set; }
