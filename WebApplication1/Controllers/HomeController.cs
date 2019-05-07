@@ -26,6 +26,7 @@ namespace WebApplication1.Controllers
         [HttpPost]
         public ActionResult Create(tBookData vBookData)
         {
+            vBookData.BOOK_STATUS = "a";
             db.tBookData.Add(vBookData);
             db.SaveChanges();
             return RedirectToAction("Index");

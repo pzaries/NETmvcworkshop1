@@ -4,10 +4,10 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
-
+<h2>首頁</h2>
+ 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("新增", "Create")
 
 </p>
 <table class="table">
@@ -54,9 +54,8 @@
         
         
         <td>
-            @Html.ActionLink("Edit", "Edit", new { BOOK_ID = item.BOOK_ID }) |
-            @Html.ActionLink("Details", "Details", new { BOOK_ID = item.BOOK_ID }) |
-            @Html.ActionLink("Delete", "Delete", new { BOOK_ID = item.BOOK_ID })
+            @Html.ActionLink("修改", "Edit", new { BOOK_ID = item.BOOK_ID }) |
+            @Html.ActionLink("刪除", "Delete", new { BOOK_ID = item.BOOK_ID })
         </td>
     </tr>
 }
